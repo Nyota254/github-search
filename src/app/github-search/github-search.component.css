@@ -1,0 +1,6 @@
+#bg-1 {
+    background-image: url('../../assets/bg-1.png');
+    background-size: cover;
+    color: wheat;
+    height: 100vh;
+}
