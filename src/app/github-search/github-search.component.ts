@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubSearchComponent implements OnInit {
 
+  nameSearch(searchName:string){
+    
+  }
+
   constructor() { }
 
   ngOnInit() {

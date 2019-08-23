@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { GithubSearchComponent } from './github-search/github-search.component';
 import { GithubSearchformComponent } from './github-searchform/github-searchform.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RepositorySearchpageComponent } from './repository-searchpage/repository-searchpage.component';
+import { FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubSearchComponent,
     GithubSearchformComponent,
-    NavbarComponent
+    NavbarComponent,
+    RepositorySearchpageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

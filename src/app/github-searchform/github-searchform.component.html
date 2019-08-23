@@ -1,6 +1,6 @@
 <form class="form-inline">
     <div class="form-group">
-    <input type="text" class="form-control mr-15" placeholder="Search">
+    <input type="text" class="form-control mr-15" placeholder="Search" name="searchName" [(ngModel)]="searchName">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-success" (click)='search()'>Submit</button>
 </form>

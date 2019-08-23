@@ -2,5 +2,6 @@
     background-image: url('../../assets/bg-1.png');
     background-size: cover;
     color: wheat;
+    text-align: center;
     height: 100vh;
 }
