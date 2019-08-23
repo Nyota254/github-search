@@ -1,13 +1,49 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Users } from './users';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GithubHttpService {
 
-  details: Users[] = [];
+  details: Users;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+    this.details = new Users("","",0,0,0);
+
+  }
+
+  searchUsers(searchName:string){
+    interface Apiresponse{
+      avatar_url:string;
+      name:string;
+      public_repos:number;
+      followers:number;
+      following:number;
+    }
+
+    let searchPoint = "https://api.github.com/users/" + searchName + "?access_token=" + environment.Api;
+
+    let promise =  new Promise((resolve, reject)=>{
+      this.http.get<Apiresponse>(searchPoint).toPromise().then(
+        (response)=>{
+          this.details.Avatorurl = response.avatar_url 
+          this.details.Name = response.name 
+          this.details.NumberofRepos =response.public_repos
+          this.details.followers = response.followers
+          this.details.following = response.following
+          resolve()
+        },
+        (error)=>{
+          console.log(error)
+          reject()
+        }
+      )
+  })
+  return promise;
+  }
+
+  
 }
