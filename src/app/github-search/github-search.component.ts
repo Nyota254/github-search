@@ -14,7 +14,7 @@ export class GithubSearchComponent implements OnInit {
   constructor(private githubService:GithubHttpService) { }
 
   ngOnInit() {
-    // this.nameSearch("nyota254");
+    this.nameSearch("Nyota254");
   }
 
   nameSearch(searchName){
