@@ -5,3 +5,23 @@
     text-align: center;
     height: 100vh;
 }
+#bg-2 {
+    background-image: url(../../assets/bg-main.png);
+    background-size: cover;
+    color: whitesmoke;
+    /* text-align: center; */
+    background-attachment: fixed;
+}
+p {
+    font-family: 'Bangers', cursive;
+}
+h1 {
+    font-family: 'Bangers', cursive;
+}
+/* .alighnment {
+    text-align: center
+} */
+.sizer {
+    height: 50%;
+    width: auto;
+}
