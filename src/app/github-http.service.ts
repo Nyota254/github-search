@@ -18,7 +18,7 @@ export class GithubHttpService {
   searchUsers(searchName:string){
     interface Apiresponse{
       avatar_url:string;
-      name:string;
+      login:string;
       public_repos:number;
       followers:number;
       following:number;
@@ -30,7 +30,7 @@ export class GithubHttpService {
       this.http.get<Apiresponse>(searchPoint).toPromise().then(
         (response)=>{
           this.details.Avatorurl = response.avatar_url 
-          this.details.Name = response.name 
+          this.details.Name = response.login 
           this.details.NumberofRepos =response.public_repos
           this.details.followers = response.followers
           this.details.following = response.following

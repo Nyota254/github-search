@@ -1,9 +1,12 @@
-<!-- <div class="container-fluid" id="bg-1">
+<div class="container-fluid" id="bg-1">
     <h1>Welcome To Github Search</h1>
     <p>You can use this Website to search for users in github you can also use this site to search for repositorys</p>
-</div> -->
+</div>
 <div class="container-fluid">
     <app-github-searchform (emmitSearch)='nameSearch($event)'></app-github-searchform>
-
-    <p>{{users.Name}}</p>
+    <img src={{details.Avatorurl}} alt="">
+    <p>UserName: {{details.Name}}</p>
+    <p>Number of Repositorys: {{details.NumberofRepos}}</p>
+    <p>Followers:{{details.followers}}</p>
+    <p>following:{{details.following}}</p>
 </div>
