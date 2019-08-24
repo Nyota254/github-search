@@ -11,7 +11,7 @@ export class GithubHttpService {
   details: Users;
 
   constructor(private http:HttpClient) { 
-    this.details = new Users("","",0,0,0);
+    this.details = new Users("","",0,0,0,"");
 
   }
 
@@ -22,6 +22,7 @@ export class GithubHttpService {
       public_repos:number;
       followers:number;
       following:number;
+      html_url:string;
     }
 
     let searchPoint = "https://api.github.com/users/" + searchName + "?access_token=" + environment.Api;
@@ -34,6 +35,7 @@ export class GithubHttpService {
           this.details.NumberofRepos =response.public_repos
           this.details.followers = response.followers
           this.details.following = response.following
+          this.details.Userprofile = response.html_url
           resolve()
         },
         (error)=>{

@@ -8,20 +8,21 @@
   <P>YOU CAN SEARCH FOR USER NAMES AND REPOSITORYS FROM GITHUB ON THIS SITE</P>
 </div>
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <h1>Search Users Here</h1>
       <app-github-searchform (emmitSearch)='nameSearch($event)'></app-github-searchform>
     </div>
-    <div class="col-md-3">
-        <br><br>
+    <div class="col-md-4">
+        <h1>User Avator</h1>
       <img src={{details.Avatorurl}} alt="" class="rounded-circle sizer">
     </div>
-    <div class="col-md-6">
-        <br><br>
+    <div class="col-md-4">
+      <h1>User Details:</h1>
       <p>UserName: {{details.Name}}</p>
       <p>Number of Repositorys: {{details.NumberofRepos}}</p>
       <p>Followers: {{details.followers}}</p>
       <p>following: {{details.following}}</p>
+      <a href={{details.Userprofile}}><button class="btn btn-primary">Github Profile</button></a>
     </div>
   </div>
 </div>
