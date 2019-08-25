@@ -1,0 +1,10 @@
+#bg-1 {
+    background-image: url(../../assets/bg-main.png);
+    background-size: cover;
+    color: #fffdd0;
+    background-attachment: fixed;
+    height: 1000vh;
+}
+#font1 {
+    font-family: 'Bangers', cursive;
+}

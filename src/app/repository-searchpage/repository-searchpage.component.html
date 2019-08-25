@@ -1,1 +1,15 @@
-<p>repository-searchpage works!</p>
+<div id="bg-1">
+<app-repo-formsearch (emmitRepositorySearch)= 'repoName($event)'></app-repo-formsearch>
+<div id="font1">
+<ul>
+    <li *ngFor = 'let repo of repository'>
+        Repository Name: {{repo.repository}}
+        <br>
+        Repository Description: {{repo.description}}
+        <br>
+    <a href={{repo.repourl}}><button class="btn btn-success">Repository Url</button></a>
+    </li>
+</ul>
+</div>
+</div>
+
