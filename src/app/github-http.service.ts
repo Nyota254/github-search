@@ -11,6 +11,7 @@ export class GithubHttpService {
 
   details: Users;
   repositorys: Repositorys[];
+   myApi = "f584cc7efcaa8fb7f7295d6118fc6ae3d7b74cb7"
 
   constructor(private http:HttpClient) { 
     this.details = new Users("","",0,0,0,"");
@@ -27,7 +28,7 @@ export class GithubHttpService {
       html_url:string;
     }
 
-    let searchPoint = "https://api.github.com/users/" + searchName + "?access_token=" + environment.Api;
+    let searchPoint = "https://api.github.com/users/" + searchName + "?access_token=" + this.myApi;
 
     let promise =  new Promise((resolve, reject)=>{
       this.http.get<Apiresponse>(searchPoint).toPromise().then(
@@ -59,7 +60,7 @@ export class GithubHttpService {
     //   items:any;
     // }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get("https://api.github.com/search/repositories?q="+searchRepos+"&per_page="+show+"&sort=forks&order=asc?access_token="+environment.Api).toPromise().then(reporesponse=>{
+      this.http.get("https://api.github.com/search/repositories?q="+searchRepos+"&per_page="+show+"&sort=forks&order=asc?access_token="+this.myApi).toPromise().then(reporesponse=>{
         // this.repositorys = reporesponse.items;
         this.repositorys=[];
             for(let i=0; i<show; i++){
