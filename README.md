@@ -1,6 +1,18 @@
-# GithubSearch
+# GITHUB SEARCH
+#### A site for searching Github users and repositorys online, 25-august-2019
+#### By **Kingecha Kevin Nyota**
+## Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+This project was created to help users find the git hub profiles of other users one can also search for repositorys using this site
+
+## Technologys Used
+* Angular was used as the main framework
+* Html
+* Css - Bootstrap
+* Typescript
+
+## BUGS
+There are no bugs reported yet
 
 ## Development server
 
@@ -22,6 +34,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Support and contact details
+if you run into any issues please contact knyota66@gmail.com
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### License
+*MIT*
+Copyright (c) 2019 **Kingecha Kevin Nyota**
