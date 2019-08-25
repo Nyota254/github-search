@@ -3,7 +3,8 @@
     background-size: cover;
     color: #fffdd0;
     background-attachment: fixed;
-    height: 100vh;
+    max-width: 100%;
+    height:auto;
 }
 p {
     font-family: 'Bangers', cursive;
