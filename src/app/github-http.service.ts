@@ -50,18 +50,10 @@ export class GithubHttpService {
   return promise;
   }
 
-  // searchRepositorys(){
-  //   interface Apiresponserepo{
-
-  //   }
 
   searchRepositorys(searchRepos,show){
-    // interface Apiresponse{
-    //   items:any;
-    // }
     let promise = new Promise((resolve,reject)=>{
       this.http.get("https://api.github.com/search/repositories?q="+searchRepos+"&per_page="+show+"&sort=forks&order=asc?access_token="+this.myApi).toPromise().then(reporesponse=>{
-        // this.repositorys = reporesponse.items;
         this.repositorys=[];
             for(let i=0; i<show; i++){
               let reponame = reporesponse["items"][i]["full_name"];
