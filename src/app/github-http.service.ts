@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Users } from './users';
 import { environment } from 'src/environments/environment';
+import { Repositorys } from './repositorys';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import { environment } from 'src/environments/environment';
 export class GithubHttpService {
 
   details: Users;
+  repositorys: Repositorys[];
 
   constructor(private http:HttpClient) { 
     this.details = new Users("","",0,0,0,"");
@@ -47,5 +49,32 @@ export class GithubHttpService {
   return promise;
   }
 
-  
-}
+  // searchRepositorys(){
+  //   interface Apiresponserepo{
+
+  //   }
+
+  searchRepositorys(searchRepos,show){
+    // interface Apiresponse{
+    //   items:any;
+    // }
+    let promise = new Promise((resolve,reject)=>{
+      this.http.get("https://api.github.com/search/repositories?q="+searchRepos+"&per_page="+show+"&sort=forks&order=asc?access_token="+environment.Api).toPromise().then(reporesponse=>{
+        // this.repositorys = reporesponse.items;
+        this.repositorys=[];
+            for(let i=0; i<show; i++){
+              let reponame = reporesponse["items"][i]["full_name"];
+              let repodescription = reporesponse ["items"][i]["description"];
+              let repourl = reporesponse ["items"][i]["html_url"]
+              let repo = new Repositorys(reponame,repodescription,repourl);
+              this.repositorys.push(repo);
+            }
+        resolve();
+      },error=>{
+        console.log('error')
+        reject(error);
+      })
+    })
+    return promise;
+  }
+  }
