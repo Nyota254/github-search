@@ -10,7 +10,8 @@ import { RepositorySearchpageComponent } from './repository-searchpage/repositor
 import { FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RepoFormsearchComponent } from './repo-formsearch/repo-formsearch.component';
-import { NotFoundComponent } from './not-found/not-found.component'
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HighlightDirective } from './highlight.directive'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NotFoundComponent } from './not-found/not-found.component'
     NavbarComponent,
     RepositorySearchpageComponent,
     RepoFormsearchComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
