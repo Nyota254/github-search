@@ -9,7 +9,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RepositorySearchpageComponent } from './repository-searchpage/repository-searchpage.component';
 import { FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RepoFormsearchComponent } from './repo-formsearch/repo-formsearch.component'
+import { RepoFormsearchComponent } from './repo-formsearch/repo-formsearch.component';
+import { NotFoundComponent } from './not-found/not-found.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RepoFormsearchComponent } from './repo-formsearch/repo-formsearch.compo
     GithubSearchformComponent,
     NavbarComponent,
     RepositorySearchpageComponent,
-    RepoFormsearchComponent
+    RepoFormsearchComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
